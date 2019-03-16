@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "Title": "Prime Number",
+        "Accuracy": 0.5,
+        "Attempted": 100,
+        "Description":"You are given an integer N. You need to print the series of all prime numbers till N.",
+        "Input-format":"The first and only line of the input contains a single integer N denoting the number till where you need to find the series of prime number."
+    },
+    
+    {
+        "id": 2,
+        "Title": "Seating Arrangement",
+        "Accuracy": 0.5,
+        "Attempted": 24076,
+        "Description":"Akash and Vishal are quite fond of travelling. They mostly travel by railways. They were travelling in a train one day and they got interested in the seating arrangement of their compartment. The compartment looked something like         So they got interested to know the seat number facing them and the seat type facing them. The seats are denoted as follows :        Window Seat : WS        Middle Seat : MS        Aisle Seat : AS                You will be given a seat number, find out the seat number facing you and the seat type, i.e. WS, MS or AS.",
+        "Input-format":"The first and only line of the input contains a single integer N denoting the number till where you need to find the series of prime number."
+    }
+]
