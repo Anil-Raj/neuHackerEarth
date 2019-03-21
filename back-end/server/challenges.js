@@ -1,7 +1,7 @@
-jsonFile = "problems.json";
+jsonFile = "challengeFile.json";
 var fs = require('fs');
 
-exports.problemsGetMethod = (req, res) => {
+exports.getAll = (req, res) => {
     fs.readFile(jsonFile, (err, data) => {
         res.send(JSON.parse(data));
     })
