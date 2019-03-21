@@ -3,7 +3,7 @@ import axios from 'axios';
 import Axios from 'axios';
 class PracticeEditor extends Component {
     state = {
-        language: "JS",
+        language: "CSharp",
         languageList: [{value:"JS",displayName:"Javascript"}, {value:"CSharp ",displayName:"CSharp"}]
     }
     componentDidMount() {
@@ -12,6 +12,8 @@ class PracticeEditor extends Component {
             .then(data => this.setState({ problem: data }))
     }
     submit() {
+        console.log({code:this.state.code,language:this.state.language});
+        
         axios.post('http://localhost:3030/compile', {code:this.state.code,language:this.state.language})
             .then(response =>response.data)
             .then(data => this.setState({ output: data }))

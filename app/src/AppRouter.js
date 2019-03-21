@@ -1,18 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import ChallengeContainer from "./ChallengeContainer/ChallengeContainer";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
+import ChallengeContainer from "./Challenge/ChallengeContainer/ChallengeContainer";
 import PracticeEditor from "./PracticeEditor/PracticeEditor";
-import ChallengeDetail from './ChallengeDetail/ChallengeDetail';
+import ChallengeDetail from './Challenge/ChallengeDetail/ChallengeDetail';
+import CodeArenaFinding from './CodeArena/CodeArenaFinding/CodeArenaFinding';
+import NoMatch from './NoMatch/NoMatch';
+import CodeArenaBattleRing from './CodeArena/CodeArenaBattleRing/CodeArenaBattleRing';
 
-function AppRouter (){
-    return (<Router>
-        <Route path="/" exact component={ChallengeContainer} />
-        <Route path="/practice" component={PracticeEditor} />
-        <Route path="/challenge/:id" component={ChallengeDetail} />
-        <Route path="/challenge/codearena/finding" component={CodeArenaFinding} />
-
-
-    </Router>);
+function AppRouter() {
+    return (
+        <Switch>
+            <Route exact path="/" exact component={ChallengeContainer} />
+            <Route exact path="/practice" component={PracticeEditor} />
+            <Route exact path="/challenge/:type/:id" component={ChallengeDetail} />
+            <Route exact path="/challenge/codearena/finding" component={CodeArenaFinding} />
+            <Route exact path="/ring" component={CodeArenaBattleRing} />
+            <Route component={NoMatch} />
+        </Switch>);
 }
 
 export default AppRouter;

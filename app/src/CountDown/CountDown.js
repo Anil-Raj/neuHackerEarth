@@ -10,8 +10,10 @@ class CountDown extends Component {
        
     }
     updateTime = ()=>{
+        var endsIn = this.props.endsIn ? this.props.endsIn : "2019 10 10";
         var one_day = 1000 * 60 * 60 * 24;
-        var date1_ms = new Date("2019 04 04").getTime();
+        var cts = endsIn;
+        var date1_ms = new Date(cts).getTime();
         var date2_ms = new Date().getTime(); // Calculate the difference in milliseconds 
         var difference_ms = date1_ms - date2_ms;
         var sec = difference_ms / 1000;

@@ -1,0 +1,31 @@
+/problems
+returns list of problems
+------------------------------------------------------
+problems/:id
+return problem data with specified id
+-------------------------------------------------------
+/compile
+Input:
+{
+    code:'contains the code text',
+    language:'specify the language'
+}
+Output:
+stdout of code
+--------------------------------------------------------
+/challenges
+returns the challenges list
+--------------------------------------------------------
+/codearena/ring/:id
+adds the id to a ring and returns the ring id
+--------------------------------------------------------
+/codearena/isRingReady/:id
+returns 
+ready: ringId if the ring is ready for match
+otherwise returns not ready
+-------------------------------------------------------- 
+/code
+Input:
+{digest:id}
+OutPut:
+returns the code associated with the specified digest
