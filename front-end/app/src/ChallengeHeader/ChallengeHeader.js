@@ -23,7 +23,7 @@ class ChallengeHeader extends Component {
 
     }
     render() {
-        return (<div>
+        return (<div style={{position:"sticky",top:0,zIndex:100,background:"white"}}>
             <div>Hackathons, Programming Challenges, and  Coding Competitions</div>
             <NeuTabList tabList={this.state.tabList} handleClick={this.handleClick} />
         </div>);

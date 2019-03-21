@@ -139,3 +139,12 @@
 a{
     text-decoration: none;
 }
+.ellipsis{
+    /* width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

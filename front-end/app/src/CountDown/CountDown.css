@@ -18,3 +18,11 @@
 .caps {
     text-transform: uppercase;
 }
+.align-left{
+    text-align: left;
+}
+.less-margin-left{
+margin-right: 5px;
+} .less-margin-right{
+    margin-left: 5px;
+}
