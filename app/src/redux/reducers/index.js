@@ -7,8 +7,9 @@ const initalState = {
 function rootReducers(state = initalState, action){
     switch(action.type){
         case "UPDATE_SCROLL": return {...state, scrollRefs:state.scrollRefs.concat(action.payload)};
-        case "UPDATE_ACTIVE_TAB": 
-        return {...state, activeTab: action.payload}; 
+        case "UPDATE_ACTIVE_TAB": return {...state, activeTab: action.payload}; 
+        case "UPDATE_OPPONENT": return {...state, opponent:action.payload};
+        case "UPDATE_USER": return {...state, user:action.payload};
         default: return state;
     }
 }

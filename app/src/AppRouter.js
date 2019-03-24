@@ -14,7 +14,7 @@ function AppRouter() {
             <Route exact path="/practice" component={PracticeEditor} />
             <Route exact path="/challenge/:type/:id" component={ChallengeDetail} />
             <Route exact path="/challenge/codearena/finding" component={CodeArenaFinding} />
-            <Route exact path="/ring" component={CodeArenaBattleRing} />
+            <Route exact path="/ring/:id" component={CodeArenaBattleRing} />
             <Route component={NoMatch} />
         </Switch>);
 }

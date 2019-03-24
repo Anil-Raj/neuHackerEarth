@@ -9,7 +9,7 @@ function getFileName(digest: any) {
 }
 export function getCode(req: any, res: any) {
     console.log("getcode");
-    console.log(req.body.digest);
+    console.log(req.body);
     
     const filename = getFileName(req.body.digest);
     console.log(filename);

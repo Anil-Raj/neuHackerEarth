@@ -1,63 +1,5 @@
-import Compiler from "./compiler";
-import Pool from "./Pool";
-import { io } from "./newapp";
-import events = require("events");
+import CodeArena from "./CodeArena";
 
-export default class CodeArena {
-    private poolList: Pool[] = [];
-    constructor() {
-    }
-    getPool(user: any) {
-        let pool = this.poolList.find(p => p.users.some(u => u.id == user.id));
-        console.log(pool);
-        
-        //if a pool exist which already has the user
-         if(!pool) {
-            // if pool has space add user and return pool
-            if (this.poolList.find(p => p.canAddMore())) {
-                this.poolList = this.poolList.map(p=>{
-                    if(p.canAddMore()){
-                        p.addUser(user);
-                        pool = p;
-                    }
-                    return p;
-                })
-            } else {  //crate new pool add user and return the pool
-                pool = new Pool();
-                pool.addUser(user);
-                this.poolList.push(pool);
-            }
-        }
-        console.log('pooool');
-        console.log(pool);
-        
-        
-        if(pool && pool.users.length == 2){
-            console.log('pool ready');
-            var eventEmitter = new events.EventEmitter();
-
-            var emitter = require('./event')
-            //Fire the 'scream' event:
-            emitter.eventBus.sendEvent('join_fight',pool);
-           
-        }
-        return pool;
-
-       
-    }
-    getUserCodeSubmitResponse(user:any,load:any){
-        let compiler = new Compiler();
-        var output = compiler.compile({code:load.code,language:load.language}, (response: any) => {
-            console.log(response);
-            let pool = this.getPool(user);
-            if (pool) {
-                pool.updateUser({...user,score:user.score + 5});
-            }
-            return { result: response, user:user };
-        });
-    }
-
-}
 // const jsonFile = "codearena.json";
 // import * as fs from 'fs';
 // import Pool from './Pool';
@@ -67,21 +9,21 @@ export default class CodeArena {
 //     return 5;
 // }
 // let poolList: Pool[] = [];
-// let userList: User[] = [new User(1, "https://he-s3.s3.amazonaws.com/media/avatars/anilraj659/resized/50/photo.jpg", "anilraj659"), new User(2, "", "sidraj")]
+// let userList: User[] = [new User(1,"https://he-s3.s3.amazonaws.com/media/avatars/anilraj659/resized/50/photo.jpg","anilraj659"),new User(2,"","sidraj")]
 // export function getRing(req, res) {
 //     let userId = req.params.id;
 //     let pool = poolList.find(p => p.canAddMore());
 //     let exist = false;
 //     poolList.map(p => {
 //         exist = p.users.some(u => u.id == userId)
-//         if (exist && !p.canAddMore()) {
+//         if(exist && !p.canAddMore()){
 //             res.send(p.users);
-//         } else if (exist) { res.send("" + p.id); return; }
+//         }else if (exist) { res.send("" + p.id); return; }
 //     })
 //     if (!exist) if (!pool) {
 //         console.log('creating new pool');
 //         let newpool = new Pool();
-//         newpool.addUser(userList.find(u => u.id == userId));
+//         newpool.addUser(userList.find(u=>u.id == userId));
 //         poolList.push(newpool);
 //         res.send(newpool);
 //         return;
@@ -139,6 +81,16 @@ export default class CodeArena {
 //             pool.updateUser(users);
 //         }
 //         console.log(response);
-//         res.send({ result: response, pool: pool });
+//         res.send({result:response,pool:pool});
 //     });
 // }
+let codearena = new CodeArena();
+export function join_fight(req:any,res:any){
+    console.log(req.body);
+    let user = req.body.user;
+    let pool = codearena.getPool(user);
+    res.send(pool);
+}
+export function compileUserCode(req:any,res:any){
+
+}

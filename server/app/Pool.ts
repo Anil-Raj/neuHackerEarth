@@ -3,7 +3,7 @@ function addMinutes(date:Date, minutes:number) {
 }
 export default class Pool {
     id:number;
-    users:{id:number,score:number}[];
+    users:any[];
     capacity:number;
     endsIn: Date;
 
@@ -17,13 +17,13 @@ export default class Pool {
     canAddMore(){
         return this.capacity > this.users.length;
     }
-    addUser(userID:number) {
+    addUser(user:any) {
         if(this.canAddMore()){
-            this.users.push({id:userID,score:0});
+            this.users.push(user);
         }
     }
-    updateUser(users:{id:number,score:number}[]){
-        this.users = users;
+    updateUser(user:any){
+        this.users = this.users.map(u =>u.id == user.id ? user:u);
     }
   
   }

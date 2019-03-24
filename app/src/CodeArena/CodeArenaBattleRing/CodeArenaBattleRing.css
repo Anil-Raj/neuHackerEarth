@@ -1,0 +1,349 @@
+/* ::-webkit-scrollbar {
+    width: 5px;
+    height: 12px;
+    padding-left: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ecedee;
+    -webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}*/
+
+
+.flex {
+    display: flex;
+    height: calc(100vh - 121px);
+  }
+  .problem-container {
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+  }
+  .code-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    background: #202020;
+  }
+  .ring-footer {
+    width: 100%;
+    height: 59px;
+    border-top: 1px solid #d9dde0;
+    background: #f8f8f9;
+}
+  .fight-quit {
+    margin-top: 19px;
+    float: left;
+    margin-left: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-size: 10px;
+}
+
+.fight-header {
+    height: 53px;
+    padding: 7px 20px 0 5px;
+}
+
+.users-container {
+    float: left;
+    font-weight: 700;
+}
+
+.dark {
+    color: #46535e;
+}
+
+.float-right {
+    float: right;
+}
+
+.user {
+    float: left;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.regular {
+    font-size: 14px;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.regular {
+    font-size: 14px;
+}
+
+.current-user div.username {
+    padding-left: 6px;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.light {
+    color: #9ca3a8;
+}
+
+.gravatar {
+    margin-right: 10px;
+    margin-top: 3px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.gravatar img {
+    border-radius: 30px;
+}
+
+.score-left {
+    margin-left: -15px;
+}
+
+.score {
+    height: 25px;
+    padding-right: 15px;
+    background: #ecedee;
+    margin-top: 6px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.score-right {
+    margin-right: -15px;
+}
+
+.solved-more {
+    color: #6bbd00;
+    font-weight: bold;
+}
+
+.solved {
+    padding-left: 10px;
+    margin-top: 1px;
+}
+
+.users-container .slash {
+    font-weight: normal;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.time-left {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+
+div.date {
+    padding: 0 0 0 10px;
+    border-left: 1px solid #d9dde0;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
+.large {
+    font-size: 16px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.light {
+    color: #9ca3a8;
+}
+
+.align-left {
+    text-align: left;
+}
+
+ /* .code-problem-container {
+    height: calc(100% - 100px);
+    margin-right: 4px;
+    border: 1px solid #d9dde0;
+    border-bottom: 0;
+}
+.problem-container {
+    width: 40%;
+    float: left;
+    height: calc(100% - 1px);
+    max-width: calc(100% - 300px);
+    min-width: 230px;
+} */
+.problem {
+    background: #fff;
+    height: calc(100vh - 79px);
+    margin-right: 10px;
+    padding-top: 10px;
+    border-right: solid 1px #d9dde0;
+}
+.editor-container {
+    width: calc(60% - 2px);
+    float: right;
+    height: 100%;
+    overflow-y: auto;
+}
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0px;
+    height: 100%;
+}
+.statement {
+    word-wrap: break-word;
+    clear: left;
+    margin-right: 5px;
+    margin-left: 15px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+.activity-heading {
+    background-color: #ecedee;
+    padding: 3px 0 3px 14px;
+    cursor: pointer;
+    border: solid 1px #d9dde0;
+    border-right: 0;
+}
+.activity {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100% - 50px);
+    word-wrap: break-word;
+    clear: left;
+    margin-right: 5px;
+    height: 248px;
+    background: #fff;
+    margin-top: 10px;
+}
+.problem-statement-header {
+    height: 29px;
+    border-bottom: 1px solid #ecedee;
+}
+.input-output-container {
+    font-size: 14px;
+    line-height: 21px;
+    margin: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 231, 232);
+    border-image: initial;
+    border-radius: 3px;
+}
+.standard-margin {
+    margin: 30px 0px 0px;
+}
+.standard-margin {
+    margin: 30px 0px 0px;
+}
+.light {
+    color: rgb(156, 163, 168);
+}
+.small {
+    font-size: 12px;
+}
+.standard-margin {
+    margin: 30px 0px 0px;
+}
+.light {
+    color: rgb(156, 163, 168);
+}
+.small {
+    font-size: 12px;
+}
+.less-margin-2 {
+    margin: 10px 0px 0px;
+}
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    touch-action: none;
+}
+.ui-resizable {
+    position: relative;
+}
+.toggle-size {
+    float: right;
+    padding-right: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+    color: #808080;
+}
+.code-editor-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #202020;
+}
+.editor-container {
+    width: calc(60% - 2px);
+    float: right;
+    height: 91vh;
+    overflow-y: auto;
+} 
