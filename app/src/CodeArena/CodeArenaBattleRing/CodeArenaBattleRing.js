@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import './CodeArenaBattleRing.css';
+import './CodeArenaBattleRing.sass';
 import { connect } from 'react-redux';
 
 class CodeArenaBattleRing extends Component {
@@ -19,9 +19,9 @@ class CodeArenaBattleRing extends Component {
     }
 
     submit() {
-        console.log({ code: this.state.code, language: this.state.language, userId: this.state.userId, poolId: this.state.poolId });
+        console.log({ code: this.state.code, language: this.state.language, user:this.props.user});
 
-        Axios.post('http://localhost:3030/codearena/ring', { code: this.state.code, language: this.state.language, userId: this.state.userId, poolId: this.state.poolId })
+        Axios.post('http://localhost:3030/compile', { code: this.state.code, language: this.state.language, user:this.props.user})
             .then(response => response.data)
             .then(data => {
                 this.setState({ output: data.result });
@@ -32,7 +32,7 @@ class CodeArenaBattleRing extends Component {
 
     render() {
         return (
-            <div>
+            <div className="code-arena">
                 <div className="fight-header">
                     <div className="users-container dark" >
                         <div className="user margin-left-33 current-user padding-right-10" >

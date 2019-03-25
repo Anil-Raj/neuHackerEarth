@@ -1,6 +1,6 @@
 
-import child_process from 'child_process';
-import fs from 'fs';
+import * as child_process from 'child_process';
+import * as  fs from 'fs';
 
 function makeId(length:number) {
     var text = "";

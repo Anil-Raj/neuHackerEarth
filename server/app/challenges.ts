@@ -1,4 +1,4 @@
-const jsonFile = "./assets/challengeFile.json";
+const jsonFile = "./app/assets/challengeFile.json";
 import * as  fs from 'fs';
 
 export function getAll(req:any, res:any){
