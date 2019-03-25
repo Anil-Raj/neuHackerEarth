@@ -1,6 +1,5 @@
-import Compiler from "./compiler";
+import Compiler from "./Compiler";
 import Pool from "./Pool";
-import { io } from "./newapp";
 import events = require("events");
 
 export default class CodeArena {
@@ -56,5 +55,5 @@ export default class CodeArena {
             return { result: response, user:user };
         });
     }
-
+    
 }

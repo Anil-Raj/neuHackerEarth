@@ -42,7 +42,7 @@ class CodeArenaFinding extends Component {
                             this.props.history.push('/ring/' + pool.id);
                         }
                     });
-                }, 100)
+                }, 1000)
 
             }
         })
@@ -78,6 +78,7 @@ class CodeArenaFinding extends Component {
     };
     render() {
         return (
+            <div className="find">
             <div className="container">
                 {this.state.inputEntered &&
                     <div>
@@ -117,7 +118,9 @@ class CodeArenaFinding extends Component {
                         <button onClick={this.findRing}>findRing</button>
                     </div>
                 }
-            </div>);
+            </div>
+            </div>
+            );
     }
 }
 

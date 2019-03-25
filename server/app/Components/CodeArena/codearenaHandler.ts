@@ -1,5 +1,5 @@
-import CodeArena from "./CodeArena";
-import Compiler from "./compiler";
+import CodeArena from "../../Common/CodeArena";
+import Compiler from "../../Common/Compiler";
 
 let codearena = new CodeArena();
 export function join_fight(req:any,res:any){

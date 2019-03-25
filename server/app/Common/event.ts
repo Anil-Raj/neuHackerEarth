@@ -1,7 +1,7 @@
 var util = require('util')
 var eventEmitter = require('events').EventEmitter
 
-class MyEvent{
+class ServerEvent{
     constructor(){
         eventEmitter.call(this);
     }
@@ -11,10 +11,10 @@ class MyEvent{
     
 }
 
-util.inherits(MyEvent, eventEmitter)
+util.inherits(ServerEvent, eventEmitter)
 
-var eventBus = new MyEvent();
+var eventBus = new ServerEvent();
 module.exports = {
- emitter : MyEvent,
+ emitter : ServerEvent,
  eventBus : eventBus
 };
