@@ -23,8 +23,4 @@ export function handler(socket){
                 console.log(message);
                 
               });
-
-
-
-
 }

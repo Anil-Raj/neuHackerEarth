@@ -114,7 +114,6 @@ class CodeArenaFinding extends Component {
                     !this.state.inputEntered &&
                     <div>
                         <input type="text" value={this.state.userId} onChange={this.updateUser}></input>
-                        {/* {" poolId:" + this.state.poolId} */}
                         <button onClick={this.findRing}>findRing</button>
                     </div>
                 }
