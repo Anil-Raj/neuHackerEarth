@@ -3,7 +3,9 @@ import Compiler from '../../Common/Compiler';
 
 export function compilerPostMethod(req: any, res: any) {
     let compiler = new Compiler();
-    var output = compiler.compile({code: req.body.code,language: req.body.code},function(response:any){
+    var output = compiler.compile({code: req.body.code,language: req.body.language},function(response:any){
+        console.log(response);
+        
         res.send(response);
     });
 }

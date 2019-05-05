@@ -15,10 +15,6 @@ export default class Compiler{
     }
 
     compile({code,language}:any,callback:any){
-        // console.log(req.body);
-        // var body = req.body;
-        // var code = body.code;
-        // var language = body.language;
         let exec = child_process.exec;
         let fileName: string;
         let inExtension:string;

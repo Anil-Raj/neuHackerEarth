@@ -3,7 +3,7 @@ import axios from 'axios';
 import Axios from 'axios';
 class PracticeEditor extends Component {
     state = {
-        language: "CSharp",
+        language: "JS",
         languageList: [{value:"JS",displayName:"Javascript"}, {value:"CSharp ",displayName:"CSharp"}]
     }
     componentDidMount() {
@@ -19,6 +19,8 @@ class PracticeEditor extends Component {
             .then(data => this.setState({ output: data }))
     }
     handleChange = (code) => this.setState({ code: code });
+    handleLanguageChange = (event) => this.setState({ language: event.target.value })
+
 
     render() {
         return (<div className="App">
@@ -26,7 +28,7 @@ class PracticeEditor extends Component {
                 <div className="code-editor-wrapper">
                     <div className="editor-header">
                         <span className="brown-color">LANGUAGE:</span>
-                        <select className="editor-lang-select">
+                        <select className="editor-lang-select" value={this.state.language} onChange={this.handleLanguageChange}>
                             {this.state.languageList.map((language,index) => <option key={index} value={language.value}>{language.displayName}</option>)}
                         </select>
                     </div>
