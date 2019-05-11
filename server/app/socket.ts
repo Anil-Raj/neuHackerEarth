@@ -2,7 +2,7 @@
 var events = require('events');
 var emitter = require('./Common/event')
 
-export function handler(socket){
+export function handler(socket:any){
     
             //Create an event handler:
             var myEventHandler = function (message:any) {

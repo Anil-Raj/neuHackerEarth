@@ -1,5 +1,4 @@
-import compiler from '../../Common/Compiler'; 
-import Compiler from '../../Common/Compiler';
+import Compiler from "./Common/Compiler";
 
 export function compilerPostMethod(req: any, res: any) {
     let compiler = new Compiler();
