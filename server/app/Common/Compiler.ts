@@ -11,9 +11,6 @@ function makeId(length:number) {
   }
 
 export default class Compiler{
-    constructor(){
-    }
-
     compile({code,language}:any,callback:any){
         let exec = child_process.exec;
         let fileName: string;
@@ -35,6 +32,8 @@ export default class Compiler{
         } else {
             fs.writeFile(inPath+fileName+inExtension, code, (err) => {
                 exec("csc "+inPath+fileName+inExtension, function (err, stdout, stderr) {
+                    console.log(stdout,err);
+                    
                     exec(outPath+fileName+outExtension, function (err, stdout, stderr) {
                         callback(stdout);
                     });
